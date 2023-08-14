@@ -13,7 +13,7 @@ export class AuthCodeInfo {
         return new AuthCodeInfo(
             json['email'],
             json['password'],
-            json['auth-code'],
+            json['authCode'],
             json['timestamp'],
         )
     }

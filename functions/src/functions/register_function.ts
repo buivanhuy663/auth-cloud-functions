@@ -16,8 +16,8 @@ class RegisterFunction
 
     async onRequest(request: Request<ParamsDictionary>): Promise<ResponseWraper<undefined>> {
         try {
-            const email = request.body["email"]
-            const password = request.body["password"]
+            const email = request.body.email
+            const password = request.body.password
 
 
             const isExist = await emailIsExistUseCase.run(email)
@@ -43,10 +43,10 @@ class RegisterFunction
             } else {
                 const authCode = ('0' + Math.floor(Math.random() * 999999)).slice(-6)
                 const data = {
-                    "email": email,
-                    "password": password,
-                    "auth-code": authCode,
-                    "timestamp": FieldValue.serverTimestamp()
+                    email: email,
+                    password: password,
+                    authCode: authCode,
+                    timestamp: FieldValue.serverTimestamp()
                 }
                 await firestoreHelper.setDocument(ConstantKey.accountAuthCode, email, data)
                 await createSendEmail(email, authCode)

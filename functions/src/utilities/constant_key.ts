@@ -1,8 +1,8 @@
 export class ConstantKey {
-    static readonly accountAuthCode = 'accounts-authcode'
+    static readonly accountAuthCode = 'accountsAuthCode'
     static readonly congig = 'config'
-    static readonly docEmail = 'auth-email'
+    static readonly docEmail = 'authEmail'
     static readonly timestamp = 'timestamp'
-    static readonly accountsInfos = 'accounts-info'
-    static readonly accountsAuth = 'accounts-auth'
+    static readonly accountsInfos = 'accountsInfo'
+    static readonly accountsAuth = 'accountsAuth'
 }

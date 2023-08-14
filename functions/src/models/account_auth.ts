@@ -6,9 +6,9 @@ export class AccountAuth {
             email,
             password,
         }: {
-            id?: string,
-            email?: string,
-            password?: string,
+            id: string,
+            email: string,
+            password: string,
         }) {
         this.id = id;
         this.email = email;

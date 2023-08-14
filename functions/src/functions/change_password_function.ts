@@ -14,8 +14,8 @@ class ChangePasswordFunction
     async onRequest(request: Request<ParamsDictionary>): Promise<ResponseWraper<undefined>> {
         try {
             const email = request.body["email"]
-            const oldPassword = request.body["old-password"]
-            const newPassword = request.body["new-password"]
+            const oldPassword = request.body["oldPassword"]
+            const newPassword = request.body["newPassword"]
 
             const data = await getAuthUseCase.run(email);
             if (data != undefined) {

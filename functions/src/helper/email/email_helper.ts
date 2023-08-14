@@ -12,8 +12,8 @@ export async function createSendEmail(emailReceive: string, authCode: string): P
         content = content.replace("::auth-code::", authCode)
         const config = await configUseCase.run()
         if (config != undefined) {
-            const email = config['email']
-            const pass = config['pass']
+            const email = config.email
+            const pass = config.password
             //Tiến hành gửi mail, nếu có gì đó bạn có thể xử lý trước khi gửi mail
             var transporter = nodemailer.createTransport({ // config mail server
                 host: "smtp.gmail.com",

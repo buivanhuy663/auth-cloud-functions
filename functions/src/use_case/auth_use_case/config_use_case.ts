@@ -11,3 +11,4 @@ class ConfigUseCase implements PromiseOutputUseCase<DocumentData | undefined> {
 }
 
 export const configUseCase = new ConfigUseCase()
+

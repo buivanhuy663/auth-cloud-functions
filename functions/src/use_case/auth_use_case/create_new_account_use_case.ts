@@ -12,7 +12,11 @@ class CreateNewAccountUseCase implements
             await firestoreHelper.setDocument(
                 ConstantKey.accountsAuth,
                 input.email,
-                new AccountAuth({id: newDoc.id, password: input.password}).toJson(),
+                new AccountAuth({
+                    email: input.email,
+                    id: newDoc.id,
+                    password: input.password
+                }).toJson(),
             )
             await newDoc.set(new Account({id: newDoc.id, email: input.email}).toJson())
             return newDoc.id;
