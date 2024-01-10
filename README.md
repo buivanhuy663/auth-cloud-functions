@@ -268,3 +268,16 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+
+
+////////////////////////////////
+
+1 Install firebase CLI
+npm install -g firebase-tools
+
+2 Login firebase
+firebase login
+
+3 firebase init firestore
+
+
